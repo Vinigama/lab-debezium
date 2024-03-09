@@ -1,0 +1,16 @@
+{
+  "name": "jdbc-connector-sink",  
+  "config": {
+      "connector.class": "io.debezium.connector.jdbc.JdbcSinkConnector",  
+      "tasks.max": "1",  
+      "connection.url": "jdbc:mysql://mysqldb2:3306/replicacao",  
+      "connection.username": "root",  
+      "connection.password": "root",  
+      "insert.mode": "upsert",  
+      "delete.enabled": "true",  
+      "primary.key.mode": "record_key",  
+      "schema.evolution": "basic",  
+      "database.time_zone": "UTC",  
+      "topics": "classicmodelsdb.classicmodels.customers" 
+  }
+}
